@@ -9,22 +9,22 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: #0f172a;
-    color: #e2e8f0;
+    background: #f8fafc;
+    color: #1e293b;
 }
 
+/* Header */
 header {
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(135deg, #1e293b, #020617);
+    background: linear-gradient(135deg, #e0f2fe, #f8fafc);
 }
 
 header img {
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    border: 3px solid #38bdf8;
-    box-shadow: 0 0 20px #38bdf8;
+    border: 3px solid #0ea5e9;
 }
 
 h1 {
@@ -32,26 +32,29 @@ h1 {
 }
 
 .subtitle {
-    color: #94a3b8;
+    color: #475569;
 }
 
+/* Sections */
 section {
     max-width: 950px;
     margin: auto;
     padding: 30px 20px;
+    animation: fadeUp 0.8s ease;
 }
 
 h2 {
-    border-left: 4px solid #38bdf8;
+    border-left: 4px solid #0ea5e9;
     padding-left: 10px;
 }
 
+/* Cards */
 .card {
-    background: #1e293b;
+    background: white;
     padding: 15px;
     margin: 15px 0;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(56,189,248,0.2);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
     transition: 0.3s;
 }
 
@@ -59,24 +62,43 @@ h2 {
     transform: translateY(-5px);
 }
 
+/* Links */
 a {
-    color: #38bdf8;
+    color: #0ea5e9;
     text-decoration: none;
 }
 
+/* Button */
 .button {
     padding: 12px 25px;
-    background: #38bdf8;
-    color: black;
+    background: #0ea5e9;
+    color: white;
     border-radius: 25px;
     font-weight: bold;
 }
 
+.button:hover {
+    background: #0284c7;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background: #020617;
-    color: #94a3b8;
+    background: #e2e8f0;
+    color: #475569;
+}
+
+/* Animation */
+@keyframes fadeUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 </style>
 </head>
@@ -93,18 +115,15 @@ footer {
     <h2>About Me</h2>
     <p>
         Data & Business Intelligence Analyst with 5+ years of experience in Power BI, SQL, Python, and automation.
-        I specialize in building KPI dashboards, reducing manual reporting effort, and enabling data-driven decision making
-        across Banking, Insurance, and Finance domains.
+        I specialize in building KPI dashboards and transforming manual reporting into scalable BI solutions.
     </p>
 </section>
 
 <section>
     <h2>Key Achievements</h2>
-
-    <div class="card">🚀 Reduced reporting effort by <b>45%</b> using Power BI automation</div>
-    <div class="card">📈 Improved operational efficiency by <b>30%</b></div>
-    <div class="card">📊 Increased stakeholder adoption of dashboards by <b>60%</b></div>
-
+    <div class="card">🚀 Reduced reporting effort by <b>45%</b></div>
+    <div class="card">📈 Improved efficiency by <b>30%</b></div>
+    <div class="card">📊 Increased dashboard adoption by <b>60%</b></div>
 </section>
 
 <section>
@@ -112,25 +131,25 @@ footer {
 
     <div class="card">
         <b>AI Resume Critique Tool</b><br>
-        Built using Python, Streamlit & OpenAI for resume analysis & skill-gap recommendations.<br>
+        Python + OpenAI based resume analyzer<br>
         <a href="https://github.com/vijay-93/Automated-Resume-Evaluation-Skill-Gap-Analyzer" target="_blank">View Project</a>
     </div>
 
     <div class="card">
         <b>Gen AI Analytics Dashboard</b><br>
-        Power BI dashboard analyzing LLM usage, response time & user ratings.<br>
+        Power BI dashboard for LLM analytics<br>
         <a href="https://github.com/vijay-93/Generative-AI-Dashboard" target="_blank">View Project</a>
     </div>
 
     <div class="card">
         <b>Credit Card Risk Analysis</b><br>
-        Analyzed 26K+ transactions using Power BI & DAX to identify risk patterns.<br>
+        26K+ transactions analysis using Power BI<br>
         <a href="https://github.com/vijay-93/Credit-Card-Spending-Habits-in-India" target="_blank">View Project</a>
     </div>
 
     <div class="card">
-        <b>Airline Customer Satisfaction</b><br>
-        Dashboard analyzing customer satisfaction, delays & service quality.<br>
+        <b>Airline Customer Dashboard</b><br>
+        Customer satisfaction analysis dashboard<br>
         <a href="https://github.com/vijay-93/Airline_Customer_Satisfactory" target="_blank">View Project</a>
     </div>
 
@@ -141,7 +160,7 @@ footer {
     <div class="card">Power BI, DAX, Power Query</div>
     <div class="card">SQL, MySQL, Excel</div>
     <div class="card">Python</div>
-    <div class="card">Data Modeling, KPI Design, Dashboarding</div>
+    <div class="card">Data Modeling, KPI Design</div>
 </section>
 
 <section>
