@@ -6,6 +6,10 @@
 <title>Vijay Sriraman | Data Analyst</title>
 
 <style>
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -13,7 +17,24 @@ body {
     color: #1e293b;
 }
 
-/* Header */
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #0ea5e9;
+    font-weight: bold;
+}
+
+/* HEADER */
 header {
     text-align: center;
     padding: 60px 20px;
@@ -27,15 +48,11 @@ header img {
     border: 3px solid #0ea5e9;
 }
 
-h1 {
-    margin: 10px 0;
-}
-
 .subtitle {
     color: #475569;
 }
 
-/* Sections */
+/* SECTIONS */
 section {
     max-width: 950px;
     margin: auto;
@@ -48,7 +65,7 @@ h2 {
     padding-left: 10px;
 }
 
-/* Cards */
+/* CARDS */
 .card {
     background: white;
     padding: 15px;
@@ -62,48 +79,88 @@ h2 {
     transform: translateY(-5px);
 }
 
-/* Links */
-a {
-    color: #0ea5e9;
-    text-decoration: none;
+/* KPI */
+.kpi {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* Button */
+.kpi div {
+    flex: 1;
+    background: #e0f2fe;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* SKILLS */
+.skill {
+    margin: 15px 0;
+}
+
+.bar {
+    width: 100%;
+    height: 10px;
+    background: #e2e8f0;
+    border-radius: 10px;
+}
+
+.fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0ea5e9, #0284c7);
+    border-radius: 10px;
+    animation: grow 1.5s ease;
+}
+
+/* TAGS */
+.tags span {
+    display: inline-block;
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+/* BUTTON */
 .button {
     padding: 12px 25px;
     background: #0ea5e9;
     color: white;
     border-radius: 25px;
-    font-weight: bold;
+    text-decoration: none;
 }
 
-.button:hover {
-    background: #0284c7;
-}
-
-/* Footer */
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
     background: #e2e8f0;
-    color: #475569;
 }
 
-/* Animation */
+/* ANIMATION */
 @keyframes fadeUp {
-    from {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes grow {
+    from {width: 0;}
 }
 </style>
 </head>
 
 <body>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
 
 <header>
     <img src="profile.jpg">
@@ -111,74 +168,83 @@ footer {
     <p class="subtitle">Data Analyst | Power BI Developer | 5+ Years Experience</p>
 </header>
 
-<section>
+<section id="about">
     <h2>About Me</h2>
     <p>
-        Data & Business Intelligence Analyst with 5+ years of experience in Power BI, SQL, Python, and automation.
-        I specialize in building KPI dashboards and transforming manual reporting into scalable BI solutions.
+        Data & BI Analyst with 5+ years of experience delivering dashboards,
+        automation, and decision-support analytics across finance and banking.
     </p>
 </section>
 
 <section>
-    <h2>Key Achievements</h2>
-    <div class="card">🚀 Reduced reporting effort by <b>45%</b></div>
-    <div class="card">📈 Improved efficiency by <b>30%</b></div>
-    <div class="card">📊 Increased dashboard adoption by <b>60%</b></div>
+    <h2>Key Impact</h2>
+    <div class="kpi">
+        <div>45% ↓ Reporting Effort</div>
+        <div>30% ↑ Efficiency</div>
+        <div>60% ↑ Adoption</div>
+    </div>
 </section>
 
-<section>
+<section id="projects">
     <h2>Projects</h2>
 
     <div class="card">
         <b>AI Resume Critique Tool</b><br>
-        Python + OpenAI based resume analyzer<br>
+        Python + OpenAI resume analyzer<br>
         <a href="https://github.com/vijay-93/Automated-Resume-Evaluation-Skill-Gap-Analyzer" target="_blank">View Project</a>
     </div>
 
     <div class="card">
-        <b>Gen AI Analytics Dashboard</b><br>
-        Power BI dashboard for LLM analytics<br>
+        <b>Gen AI Dashboard</b><br>
+        Power BI LLM analytics dashboard<br>
         <a href="https://github.com/vijay-93/Generative-AI-Dashboard" target="_blank">View Project</a>
     </div>
 
     <div class="card">
-        <b>Credit Card Risk Analysis</b><br>
-        26K+ transactions analysis using Power BI<br>
+        <b>Credit Risk Analysis</b><br>
+        26K+ transactions analysis<br>
         <a href="https://github.com/vijay-93/Credit-Card-Spending-Habits-in-India" target="_blank">View Project</a>
-    </div>
-
-    <div class="card">
-        <b>Airline Customer Dashboard</b><br>
-        Customer satisfaction analysis dashboard<br>
-        <a href="https://github.com/vijay-93/Airline_Customer_Satisfactory" target="_blank">View Project</a>
     </div>
 
 </section>
 
-<section>
-    <h2>Skills</h2>
-    <div class="card">Power BI, DAX, Power Query</div>
-    <div class="card">SQL, MySQL, Excel</div>
-    <div class="card">Python</div>
-    <div class="card">Data Modeling, KPI Design</div>
+<section id="skills">
+    <h2>Core Skills</h2>
+
+    <div class="skill">Power BI & DAX
+        <div class="bar"><div class="fill" style="width:95%"></div></div>
+    </div>
+
+    <div class="skill">SQL
+        <div class="bar"><div class="fill" style="width:90%"></div></div>
+    </div>
+
+    <div class="skill">Python
+        <div class="bar"><div class="fill" style="width:80%"></div></div>
+    </div>
+
+    <div class="skill">Data Modeling
+        <div class="bar"><div class="fill" style="width:92%"></div></div>
+    </div>
+
+    <h2>Tools</h2>
+    <div class="tags">
+        <span>Power BI</span><span>DAX</span><span>SQL</span>
+        <span>Python</span><span>Excel</span><span>Power Automate</span>
+    </div>
 </section>
 
 <section>
     <h2>Resume</h2>
-    <a href="VijaySriraman.pdf" class="button" target="_blank">Download Resume</a>
+    <a href="VijaySriraman.pdf" class="button">Download Resume</a>
 </section>
 
-<section>
+<section id="contact">
     <h2>Contact</h2>
     <p>Email: Vijay.sriraman93@gmail.com</p>
-    <p>📍 Chennai, Tamil Nadu</p>
     <p>
-        GitHub: 
-        <a href="https://github.com/vijay-93" target="_blank">github.com/vijay-93</a>
-    </p>
-    <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/vijay-sriraman-419a1977" target="_blank">View Profile</a>
+        <a href="https://github.com/vijay-93">GitHub</a> |
+        <a href="https://www.linkedin.com/in/vijay-sriraman-419a1977">LinkedIn</a>
     </p>
 </section>
 
