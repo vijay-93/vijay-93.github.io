@@ -6,10 +6,6 @@
 <title>Vijay Sriraman | Data Analyst</title>
 
 <style>
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -22,7 +18,7 @@ nav {
     position: sticky;
     top: 0;
     background: white;
-    padding: 10px;
+    padding: 12px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -42,22 +38,19 @@ header {
 }
 
 header img {
-    width: 130px;
-    height: 130px;
+    width: 120px;
     border-radius: 50%;
-    border: 3px solid #0ea5e9;
 }
 
 .subtitle {
     color: #475569;
 }
 
-/* SECTIONS */
+/* SECTION */
 section {
-    max-width: 950px;
+    max-width: 1100px;
     margin: auto;
     padding: 30px 20px;
-    animation: fadeUp 0.8s ease;
 }
 
 h2 {
@@ -65,11 +58,17 @@ h2 {
     padding-left: 10px;
 }
 
-/* CARDS */
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
 .card {
     background: white;
-    padding: 15px;
-    margin: 15px 0;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
     transition: 0.3s;
@@ -79,58 +78,14 @@ h2 {
     transform: translateY(-5px);
 }
 
-/* KPI */
-.kpi {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.kpi div {
-    flex: 1;
-    background: #e0f2fe;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* SKILLS */
-.skill {
-    margin: 15px 0;
-}
-
-.bar {
-    width: 100%;
-    height: 10px;
-    background: #e2e8f0;
-    border-radius: 10px;
-}
-
-.fill {
-    height: 100%;
-    background: linear-gradient(90deg, #0ea5e9, #0284c7);
-    border-radius: 10px;
-    animation: grow 1.5s ease;
-}
-
-/* TAGS */
-.tags span {
-    display: inline-block;
-    background: #e0f2fe;
-    color: #0369a1;
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 20px;
-}
-
 /* BUTTON */
 .button {
-    padding: 12px 25px;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
     background: #0ea5e9;
     color: white;
-    border-radius: 25px;
+    border-radius: 20px;
     text-decoration: none;
 }
 
@@ -140,98 +95,77 @@ footer {
     padding: 20px;
     background: #e2e8f0;
 }
-
-/* ANIMATION */
-@keyframes fadeUp {
-    from {opacity: 0; transform: translateY(30px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-
-@keyframes grow {
-    from {width: 0;}
-}
 </style>
 </head>
 
 <body>
 
 <nav>
-    <a href="#about">About</a>
     <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <header>
     <img src="profile.jpg">
     <h1>Vijay Sriraman</h1>
-    <p class="subtitle">Data Analyst | Power BI Developer | 5+ Years Experience</p>
+    <p class="subtitle">Data Analyst | Power BI | SQL | Python</p>
 </header>
-
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        Data & BI Analyst with 5+ years of experience delivering dashboards,
-        automation, and decision-support analytics across finance and banking.
-    </p>
-</section>
-
-<section>
-    <h2>Key Impact</h2>
-    <div class="kpi">
-        <div>45% ↓ Reporting Effort</div>
-        <div>30% ↑ Efficiency</div>
-        <div>60% ↑ Adoption</div>
-    </div>
-</section>
 
 <section id="projects">
     <h2>Projects</h2>
 
-    <div class="card">
-        <b>AI Resume Critique Tool</b><br>
-        Python + OpenAI resume analyzer<br>
-        <a href="https://github.com/vijay-93/Automated-Resume-Evaluation-Skill-Gap-Analyzer" target="_blank">View Project</a>
+    <div class="grid">
+
+        <div class="card">
+            <h3>Logistics Dashboard</h3>
+            <p>Analyzed shipment trends and delivery performance to identify bottlenecks and improve logistics efficiency.</p>
+            <a href="https://github.com/vijay-93/Logistics-Dashboard" target="_blank" class="button">View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>Meta Ads Performance Analysis</h3>
+            <p>Built a dashboard to track campaign performance, CTR, and ROI for data-driven marketing optimization.</p>
+            <a href="https://github.com/vijay-93/Meta-Ad-Performance-Analysis" target="_blank" class="button">View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>India Election Analysis 2024</h3>
+            <p>Performed SQL analysis on election data to evaluate voting patterns and seat distribution insights.</p>
+            <a href="https://github.com/vijay-93/INDIA-GENERAL-ELECTION-RESULTS-2024" target="_blank" class="button">View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>Sales Overview Dashboard</h3>
+            <p>Analyzed revenue trends, regional performance, and customer segments using KPI dashboards.</p>
+            <a href="https://github.com/vijay-93/Sales-Overview-Dashboard" target="_blank" class="button">View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>Gen AI Analytics Dashboard</h3>
+            <p>Visualized LLM usage trends, response time, and user ratings using Power BI and DAX.</p>
+            <a href="https://github.com/vijay-93/Generative-AI-Dashboard" target="_blank" class="button">View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>AI Resume Critique Tool</h3>
+            <p>Developed an NLP-based resume analyzer with scoring and skill-gap recommendations using OpenAI.</p>
+            <a href="https://github.com/vijay-93/Automated-Resume-Evaluation-Skill-Gap-Analyzer" target="_blank" class="button">View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>Credit Card Risk Analysis</h3>
+            <p>Analyzed 26K+ transactions to identify fraud patterns and support financial risk analysis.</p>
+            <a href="https://github.com/vijay-93/Credit-Card-Spending-Habits-in-India" target="_blank" class="button">View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>Airline Customer Satisfaction</h3>
+            <p>Developed a dashboard analyzing service quality, delays, and customer satisfaction trends.</p>
+            <a href="https://github.com/vijay-93/Airline_Customer_Satisfactory" target="_blank" class="button">View Project</a>
+        </div>
+
     </div>
 
-    <div class="card">
-        <b>Gen AI Dashboard</b><br>
-        Power BI LLM analytics dashboard<br>
-        <a href="https://github.com/vijay-93/Generative-AI-Dashboard" target="_blank">View Project</a>
-    </div>
-
-    <div class="card">
-        <b>Credit Risk Analysis</b><br>
-        26K+ transactions analysis<br>
-        <a href="https://github.com/vijay-93/Credit-Card-Spending-Habits-in-India" target="_blank">View Project</a>
-    </div>
-
-</section>
-
-<section id="skills">
-    <h2>Core Skills</h2>
-
-    <div class="skill">Power BI & DAX
-        <div class="bar"><div class="fill" style="width:95%"></div></div>
-    </div>
-
-    <div class="skill">SQL
-        <div class="bar"><div class="fill" style="width:90%"></div></div>
-    </div>
-
-    <div class="skill">Python
-        <div class="bar"><div class="fill" style="width:80%"></div></div>
-    </div>
-
-    <div class="skill">Data Modeling
-        <div class="bar"><div class="fill" style="width:92%"></div></div>
-    </div>
-
-    <h2>Tools</h2>
-    <div class="tags">
-        <span>Power BI</span><span>DAX</span><span>SQL</span>
-        <span>Python</span><span>Excel</span><span>Power Automate</span>
-    </div>
 </section>
 
 <section>
