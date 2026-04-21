@@ -6,6 +6,8 @@
 <title>Vijay Sriraman | Data Analyst</title>
 
 <style>
+html { scroll-behavior: smooth; }
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -18,7 +20,7 @@ nav {
     position: sticky;
     top: 0;
     background: white;
-    padding: 12px;
+    padding: 10px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -38,17 +40,17 @@ header {
 }
 
 header img {
-    width: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
+    border: 3px solid #0ea5e9;
 }
 
-.subtitle {
-    color: #475569;
-}
+.subtitle { color: #475569; }
 
 /* SECTION */
 section {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: auto;
     padding: 30px 20px;
 }
@@ -56,6 +58,22 @@ section {
 h2 {
     border-left: 4px solid #0ea5e9;
     padding-left: 10px;
+}
+
+/* KPI */
+.kpi {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.kpi div {
+    flex: 1;
+    background: #e0f2fe;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* GRID */
@@ -74,15 +92,37 @@ h2 {
     transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.card:hover { transform: translateY(-5px); }
+
+/* SKILLS */
+.skill { margin: 15px 0; }
+
+.bar {
+    height: 10px;
+    background: #e2e8f0;
+    border-radius: 10px;
+}
+
+.fill {
+    height: 100%;
+    background: #0ea5e9;
+    border-radius: 10px;
+}
+
+/* TAGS */
+.tags span {
+    display: inline-block;
+    background: #e0f2fe;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 20px;
 }
 
 /* BUTTON */
 .button {
     display: inline-block;
     margin-top: 10px;
-    padding: 8px 15px;
+    padding: 10px 20px;
     background: #0ea5e9;
     color: white;
     border-radius: 20px;
@@ -101,16 +141,36 @@ footer {
 <body>
 
 <nav>
+    <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <header>
     <img src="profile.jpg">
     <h1>Vijay Sriraman</h1>
-    <p class="subtitle">Data Analyst | Power BI | SQL | Python</p>
+    <p class="subtitle">Data Analyst | Power BI Developer | 5+ Years Experience</p>
 </header>
 
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Data & Business Intelligence Analyst with 5+ years of experience delivering dashboards,
+        automation, and KPI-driven insights across finance and analytics domains.
+    </p>
+</section>
+
+<section>
+    <h2>Key Impact</h2>
+    <div class="kpi">
+        <div>45% ↓ Reporting Effort</div>
+        <div>30% ↑ Efficiency</div>
+        <div>60% ↑ Adoption</div>
+    </div>
+</section>
+
+<!-- UPDATED PROJECTS SECTION -->
 <section id="projects">
     <h2>Projects</h2>
 
@@ -159,13 +219,34 @@ footer {
         </div>
 
         <div class="card">
-            <h3>Airline Customer Satisfaction</h3>
+            <h3>Airline Customer Satisfaction Dashboard</h3>
             <p>Developed a dashboard analyzing service quality, delays, and customer satisfaction trends.</p>
             <a href="https://github.com/vijay-93/Airline_Customer_Satisfactory" target="_blank" class="button">View Project</a>
         </div>
 
     </div>
+</section>
 
+<section id="skills">
+    <h2>Core Skills</h2>
+
+    <div class="skill">Power BI & DAX
+        <div class="bar"><div class="fill" style="width:95%"></div></div>
+    </div>
+
+    <div class="skill">SQL
+        <div class="bar"><div class="fill" style="width:90%"></div></div>
+    </div>
+
+    <div class="skill">Python
+        <div class="bar"><div class="fill" style="width:80%"></div></div>
+    </div>
+
+    <h2>Tools</h2>
+    <div class="tags">
+        <span>Power BI</span><span>DAX</span><span>SQL</span>
+        <span>Python</span><span>Excel</span><span>Power Automate</span>
+    </div>
 </section>
 
 <section>
